@@ -12,4 +12,3 @@ int main(void)
 	puts(intro);
 	return (0);
 }	
-
