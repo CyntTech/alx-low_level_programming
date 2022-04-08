@@ -7,11 +7,13 @@
 */
 int main(void)
 {
-	printf("Size of a char: %zu byte(s)\n", sizeof(char));
-	printf("Size of an int: %u byte(s)\n", sizeof(int));
-	printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
-	printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
-	printf("Size of a float: %u byte(s)\n, sizeof(float));
 
+	int i;
+	double d;
+	char c;	
+
+	printf("The size of an double is: %lu.\n, (unsigned long)sizeof(d));
+	printf("The size of an c is: %lu.\n, (unsigned long)sizeof(c));
+	printf("The size of an c is: %lu.\n", (unsigned long)sizeof(c));
         return (0);
 }
