@@ -1,6 +1,6 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 
 /**
 * main - Entry point
@@ -17,17 +17,17 @@ int main(void)
 	last_digit = n % 10;
 	if (last_digit == 0)
 	{
-		printf("last digit of %d is 0 and is 0\n", n);
+		printf("Last digit of %d is 0 and is 0\n", n);
 	}
 	else
 	{
-		if (last_digit > 5)
+		if (Last_digit > 5)
 		{
 			printf("last digit of %d is %d and is greater than 5\n", n, last_digit);
 		}
 		else
 		{
-			printf("last digit of %d is %d and less than 6 and not 0\n", n, last_digit);
+			printf("Last digit of %d is %d and less than 6 and not 0\n", n, last_digit);
 		}
 	}
 	return (0);
