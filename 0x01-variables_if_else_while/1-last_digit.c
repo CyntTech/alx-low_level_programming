@@ -14,7 +14,7 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	last_digit = n % 8;
+	last_digit = n % 98;
 	if (last_digit == 0)
 	{
 		printf("last digit of %d is 0 and is 0\n", n);
