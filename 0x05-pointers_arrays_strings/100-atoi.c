@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* is_numerical - check if it is a digit
-* @n: Number
-* Return: If is a number, return 1 else return 0
+*  _atoi - function that convert a string to an integer
+* @s: string to convert
+* Return: int
 */
 
 int _atoi(char *s)
