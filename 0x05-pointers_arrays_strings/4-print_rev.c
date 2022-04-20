@@ -2,7 +2,7 @@
 
 /**
 * print_rev - Function that prints a string in reverse order
-* @s: String to print 
+* @s: String to print
 *
 * Return: void
 */
