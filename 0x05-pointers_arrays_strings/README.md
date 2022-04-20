@@ -1,0 +1,1 @@
+0x05-pointers_arrarys_strings readme
