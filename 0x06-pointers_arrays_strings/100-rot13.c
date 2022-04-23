@@ -8,22 +8,44 @@
 
 char *rot13(char *s)
 {
-int count = 0, i;
-char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int i = 0;
+	int j = 0;
+	char *l = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+	char *r13 = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
 
-while (*(s + count) != '\0')
-{
+	while (*(s + i) != '\0')
+	{
+		while (*(l + j) != '\0')
+		{
+			if (*(s + i) == *(l + j))
+			{
+				*(s + i)  = *(r13 + j);
+				break;
+			}
+			j++;
+		}
+		j = 0;
+		i++;
+	}
+	return (s);
+}
 
-for (i = 0; i < 52; i++)
-{
-if (*(s + count) == alphabet[i])
-{
-*(s + count) = rot13[i];
-break;
-}
-}
-count++;
-}
 
-return (s);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
