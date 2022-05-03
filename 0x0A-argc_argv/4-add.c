@@ -1,71 +1,55 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 #include <string.h>
 
 /**
- * check_num - check - string there are digit
- * @str: array str
- *
- * Return; Always 0 (Success)
- */
+ * check_digit - checks if a given char is number or not
+ * @a: input char
+ * Return: int
+ **/
 
-int check_num(char *str)
-
+int check_digit(char *a)
 {
-/*Declaring variables*/
-unsigned int count;
+	int i, num, len;
 
-count = 0;
-while (count < strlen(str)) /*count string*/
-
-{
-if (!isdigit(str[count])) /*check if str there are digit*/
-{
-return (0);
-}
-
-count++;
-}
-return (1);
+	i = 0;
+	num = 0;
+	len = strlen(a);
+	while (i < len)
+	{
+		if (a[i] < '0' || a[i] > '9')
+		{
+			return (-1);
+		}
+		else
+			num = num * 10 + (a[i] - '0');
+		i++;
+	}
+	return (num);
 }
 
 /**
- * main - To add positive integers
- * @argc: Count arguments
- * @argv: Arguments
- *
- * return: Always 0 (Success)
- */
+ * main -  program that adds positive numbers
+ * @argc: arguement count
+ * @argv: argument vector
+ * Return: int
+ **/
 
 int main(int argc, char *argv[])
-
 {
+	int i, num, res;
 
-int count;
-int str_to_int;
-int sum = 0;
-
-count = 1;
-while (count < argc)
-{
-if(check_num(argv[count]))
-
-{
-str_to_int = atoi(argv[count]); /*ATOI --> convert string to int*/
-sum += str_to_int;
-}
-
-else
-{
-printf("Error\n");
-return (1);
-}
-
-count++;
-}
-
-printf("%d\n", sum);
-
-return (0);
+	res = 0;
+	for (i = 1; i < argc; i++)
+	{
+		num = check_digit(argv[i]);
+		if (num == -1)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		res += num;
+	}
+	printf("%d\n", res);
+	return (0);
 }
