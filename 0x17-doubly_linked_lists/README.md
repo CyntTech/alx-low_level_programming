@@ -1,4 +1,4 @@
-Project 17: Double linked lists
+Project 17: Doubly linked lists
 
-What is Double linked lists and how to use it?
+What is Doubly linked lists and how to use it?
 
